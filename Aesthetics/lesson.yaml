@@ -71,13 +71,13 @@
   Output: 在上一个练习中的aes中添加size=cyl,geom_point采用默认参数
   CorrectAnswer: ggplot(data=mtcars,aes(x=wt,y=mpg,size=mtcars$cyl))+geom_point()
   AnswerTests: omnitest(correctExpr='ggplot(data=mtcars,aes(x=wt,y=mpg,size=mtcars$cyl))+geom_point()')
-  Hint: ggplot(data=mtcars,aes(x=wt,y=mpg))+geom_point(size=mtcars$cyl)
+  Hint: ggplot(data=mtcars,aes(x=wt,y=mpg,size=mtcars$cyl))+geom_point()
 
 - Class: cmd_question
-  Output: 将上一个练习中的size=cyl改为alpha=size，geom_point采用默认参数
-  CorrectAnswer: ggplot(data=mtcars,aes(x=wt,y=mpg,alpha=mtcars$cyl))+geom_point()
-  AnswerTests: omnitest(correctExpr='ggplot(data=mtcars,aes(x=wt,y=mpg,alpha=mtcars$cyl))+geom_point()')
-  Hint: ggplot(data=mtcars,aes(x=wt,y=mpg,alpha=mtcars$cyl))+geom_point()
+  Output: 将上一个练习中的size=cyl改为alpha=cyl，geom_point采用默认参数
+  CorrectAnswer: ggplot(data=mtcars,aes(x=wt,y=mpg,alpha=cyl))+geom_point()
+  AnswerTests: omnitest(correctExpr='ggplot(data=mtcars,aes(x=wt,y=mpg,alpha=cyl))+geom_point()')
+  Hint: ggplot(data=mtcars,aes(x=wt,y=mpg,alpha=cyl))+geom_point()
   
 - Class: cmd_question
   Output: 将上一个练习中的alpha=cyl改为shape=factor(cyl)，geom_point采用默认参数
@@ -142,7 +142,7 @@
   Hint: cyl.am + geom_bar()
   
 - Class: cmd_question
-  Output: 将一个geom_bar（）调用添加到cyl.am. positions将被设置为“fill”。
+  Output: 将一个geom_bar（）调用添加到cyl.am. position将被设置为“fill”。
   CorrectAnswer: cyl.am + geom_bar(position="fill")
   AnswerTests: omnitest(correctExpr='cyl.am + geom_bar(position="fill")')
   Hint: hint
@@ -168,7 +168,7 @@
     很多图形，而你想让它们处于相同的风格，或者你想要利用图形属性映射（例如color）。
 
 - Class: cmd_question
-  Output: 要实现单变量的问题，需要映射一个值，例如 0，而不是一个变量，到y上。 指定x为mtcars数据框的mpg列，使用geom_jitter（）避免将
+  Output: 要实现单变量的问题，需要映射一个值，例如 映射到y=0，而不是一个变量。 指定x为mtcars数据框的mpg列，使用geom_jitter（）避免将
     所有点放在水平线上。
   CorrectAnswer: ggplot(mtcars,aes(x=mpg,y=0))+geom_jitter()
   AnswerTests: omnitest(correctExpr='ggplot(mtcars,aes(x=mpg,y=0))+geom_jitter()')
@@ -221,7 +221,7 @@
   Output: 通过绘制carat（y）与clarity（x）的关系，将所有钻石对准clarity级别。 将price映射到color上。 alpha设为0.5。
   CorrectAnswer: ggplot(diamonds,aes(x=clarity,y=carat,alpha=0.5,color=price))+geom_point()
   AnswerTests: omnitest(correctExpr='ggplot(diamonds,aes(x=clarity,y=carat,alpha=0.5,color=price))+geom_point()')
-  Hint: ggplot(diamonds,aes(x=clarity,y=carat,alpha=0.5,color=price))+geom_point(position="jitter")
+  Hint: ggplot(diamonds,aes(x=clarity,y=carat,alpha=0.5,color=price))+geom_point()
   
 - Class: cmd_question
   Output: 在前面的图中，所有单一的值都在每个clarity类别的单个轴上排列，所以您还没有解决重叠绘图。 修改上面的图，

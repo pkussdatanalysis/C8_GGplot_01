@@ -40,7 +40,7 @@
     mtcars数据集包含了1973年“Motor Trend”杂志的32辆汽车的相关信息。 这个数据集很小，直观，并包含各种连续和分类变量。
 
 - Class: cmd_question
-  Output:  根据前边的练习绘制的mpg (miles per galon) 依赖 weight (in thousands of pounds)的ggplot2图形。 
+  Output:  根据前边的练习绘制的mpg (miles per galon) 依赖 wt (in thousands of pounds)的ggplot2图形。 
   CorrectAnswer: ggplot(mtcars, aes(x = wt, y = mpg)) +geom_point()
   AnswerTests: omnitest(correctExpr='ggplot(mtcars, aes(x = wt, y = mpg)) +geom_point()')
   Hint: ggplot(mtcars, aes(x = wt, y = mpg)) +geom_point()
@@ -52,7 +52,7 @@
   Hint: ggplot(mtcars,aes(x=wt,y=mpg,color=disp))+geom_point()
 
 - Class: cmd_question
-  Output: 仍然绘制的mpg (miles per galon) 依赖 weight (in thousands of pounds)的ggplot2图形，改变aes()（代表美学外观）中的size参数。
+  Output: 仍然绘制的mpg (miles per galon) 依赖 wt (in thousands of pounds)的ggplot2图形，改变aes()（代表美学外观）中的size参数。
     尺寸应该取决于发动机的排量，由disp变量表示。
   CorrectAnswer: ggplot(mtcars,aes(x=wt,y=mpg,size=disp))+geom_point()
   AnswerTests: omnitest(correctExpr='ggplot(mtcars,aes(x=wt,y=mpg,size=disp))+geom_point()')
