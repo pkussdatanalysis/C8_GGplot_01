@@ -63,7 +63,7 @@
   Hint: ggplot(Vocab,aes(x=education,y=vocabulary,alpha=0.2))+geom_jitter()
 
 - Class: cmd_question
-  Output: 使用geom_jitter（）而不是geom_point（）,将形状设置为1
+  Output: 使用geom_jitter（）而不是geom_point（）,将形状设置为1,不用设置alpha参数。
   CorrectAnswer: ggplot(Vocab,aes(x=education,y=vocabulary))+geom_jitter(shape=1)
   AnswerTests: omnitest(correctExpr='ggplot(Vocab,aes(x=education,y=vocabulary))+geom_jitter(shape=1)')
   Hint: ggplot(Vocab,aes(x=education,y=vocabulary))+geom_jitter(shape=1)
@@ -126,7 +126,7 @@
   Hint: ggplot(mtcars,aes(x=factor(cyl),fill=factor(am)))+geom_bar(position="fill")
   
 - Class: cmd_question
-  Output: explain what the user must do here
+  Output: 在geom_bar（）中设置position ="dodge"
   CorrectAnswer: ggplot(mtcars,aes(x=factor(cyl),fill=factor(am)))+geom_bar(position="dodge")
   AnswerTests: omnitest(correctExpr='ggplot(mtcars,aes(x=factor(cyl),fill=factor(am)))+geom_bar(position="dodge")')
   Hint: ggplot(mtcars,aes(x=factor(cyl),fill=factor(am)))+geom_bar(position="dodge")
